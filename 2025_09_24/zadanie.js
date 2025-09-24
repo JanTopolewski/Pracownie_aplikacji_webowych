@@ -26,7 +26,7 @@ r1.question('Podaj swoje imię: ', name =>{
 		x = parseInt(number);
 		r1.question('Podaj drugą dodatnią liczbę całkowitą: ', number =>{
 			y = parseInt(number);
-			if(x > 0 && y >0){
+			if(x > 0 || y > 0){
 				console.log(`Pierwsza podana przez użytkownika ${username} liczba do potęgi ${y} wynosi: ${calculatePower(x, y)}`);
 				console.log(`Iloczyn podanych przez użytkownika ${username} liczb wynosi: ${calculateProduct(x, y)}`);
 			}
@@ -36,4 +36,5 @@ r1.question('Podaj swoje imię: ', name =>{
 			r1.close();
 		})
 	})
+
 })
