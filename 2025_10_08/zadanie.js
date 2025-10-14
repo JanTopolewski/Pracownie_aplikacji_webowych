@@ -52,7 +52,7 @@ http.createServer(async (req, res) => {
         default:
             res.status = 404
             res.end('Error: Not found!')
-            break
     }
 
 }).listen(8080, '127.0.0.1')
+
