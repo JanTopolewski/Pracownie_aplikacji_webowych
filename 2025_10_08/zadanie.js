@@ -54,4 +54,5 @@ http.createServer(async (req, res) => {
             res.end('Error: Not found!')
             break
     }
-}).listen(8080)
+
+}).listen(8080, '127.0.0.1')
