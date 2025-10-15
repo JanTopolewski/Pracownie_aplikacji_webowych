@@ -1,0 +1,14 @@
+{
+  "name": "zadanie_15_10",
+  "version": "1.0.0",
+  "description": "Basic project",
+  "main": "zadanie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Topolewski",
+  "license": "ISC",
+  "dependencies": {
+    "mime-types": "^3.0.1"
+  }
+}
