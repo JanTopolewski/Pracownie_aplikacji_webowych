@@ -50,9 +50,10 @@ app.get('/get_params', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'assets')))
 
 app.get('*', (req, res) => {
-    res.status(404).send({error: "Not found!"})
+    res.status(404).json({error: "Not found!"})
 })
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
+
 })
