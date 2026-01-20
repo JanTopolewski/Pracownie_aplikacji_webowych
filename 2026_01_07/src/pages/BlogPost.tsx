@@ -2,7 +2,7 @@ export default function BlogPost() {
     return (
         <div>
             <h1>Polecany przepis na bigos</h1>
-            <h4>Kategoria: Gastronomia</h4><hr/>
+            <h3>Kategoria: Gastronomia</h3><hr/>
             <h2>Składniki</h2>
             <ul>
                 <li>500 g mięsa wieprzowego (np. karkówki)</li>
