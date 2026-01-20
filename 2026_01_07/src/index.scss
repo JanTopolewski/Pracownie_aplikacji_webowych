@@ -1,6 +1,6 @@
 %list {
-  font-size: 1.5rem;
-  margin-left: 1rem;
+  font-size: 1.9rem;
+  margin-left: 1.5rem;
   list-style-position: inside;
 }
 
@@ -12,7 +12,7 @@
 html {
   width: 100%;
   font-family: "Comic Sans MS", serif;
-  font-size: 15px;
+  font-size: 10px;
 
   body {
     width: 100%;
@@ -28,12 +28,18 @@ html {
       div {
         width: 70%;
         h1 {
-          margin: 1rem;
+          margin: 1.5rem;
           text-align: center;
+          font-size: 2.5rem;
         }
 
         h2 {
-          margin-top: 1rem;
+          margin-top: 1.5rem;
+          font-size: 1.6rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
         }
 
         ul {
@@ -47,8 +53,8 @@ html {
 
         p {
           text-align: center;
-          margin-top: 7rem;
-          font-size: 2rem;
+          margin-top: 15rem;
+          font-size: 2.5rem;
         }
       }
     }
