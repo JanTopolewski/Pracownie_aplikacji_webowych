@@ -1,21 +1,24 @@
-import './App.scss'
-import { BrowserRouter, Routes, Route } from "react-router"
-import Navbar from "./components/Navbar/Navbar.tsx"
-import Home from "./pages/Home/Home.tsx"
-import Categories from "./pages/Categories/Categories.tsx"
-import Posts from "./pages/Posts/Posts.tsx"
+import { Routes, Route } from "react-router"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Categories from "./pages/Categories"
+import Posts from "./pages/Posts"
+import SinglePost from "./pages/SinglePost";
 
 function App() {
   return (
     <>
-        <BrowserRouter>
-            <Navbar />
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path="categories" element={<Categories />} />
-                <Route path="blogpost" element={<Posts />} />
-            </Routes>
-        </BrowserRouter>
+        <Navbar />
+        <Routes>
+            <Route index element={<Home />} />
+            <Route path="categories" element={<Categories />} />
+            <Route path="post">
+                <Route index element={<Posts />} />
+                <Route path=":id" element={<SinglePost />} />
+            </Route>
+        </Routes>
+        <Footer />
     </>
   )
 }

@@ -1,0 +1,32 @@
+.SinglePost {
+  font-size: 10px;
+
+  .SinglePostTitle {
+    font-size: 3rem;
+  }
+
+  .UserHeader {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .SinglePostContent {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .CommentsTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .Comment {
+    margin: 2rem;
+    font-size: 1.4rem;
+  }
+
+  .CommentHeader {
+    font-weight: bold;
+  }
+}

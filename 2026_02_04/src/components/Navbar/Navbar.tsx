@@ -16,7 +16,7 @@ export default function Navbar(){
                 <li>
                     <Link
                         className={styles.NavbarLink}
-                        to="/posts"
+                        to="/post"
                     >
                         Wpisy
                     </Link>
