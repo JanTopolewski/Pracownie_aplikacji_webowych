@@ -1,0 +1,16 @@
+import styles from "./Categories.module.scss";
+
+export default function Categories() {
+    return (
+        <div className={styles.Category}>
+            <h1>Kategorie wpisów</h1><hr/>
+            <ul>
+                <li>Gastronomia</li>
+                <li>Turystyka</li>
+                <li>Technologia</li>
+                <li>Sport</li>
+                <li>Edukacja</li>
+            </ul>
+        </div>
+    )
+}
