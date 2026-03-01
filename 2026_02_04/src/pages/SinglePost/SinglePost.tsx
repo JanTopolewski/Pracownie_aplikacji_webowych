@@ -20,7 +20,10 @@ export default function SinglePost() {
         })()
 
         fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) throw new Error();
+                return res.json();
+            })
             .then((json: Post) => {
                 setSinglePost(json);
 
