@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 8rem;
+  max-width: 80vw;
+  margin: 2rem;
 
   .SinglePostLoading, .SinglePostError{
     font-size: 3rem;
@@ -22,6 +24,7 @@
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 10rem;
+    white-space: pre-wrap;
   }
 
   .CommentsTitle {
@@ -35,9 +38,42 @@
     font-size: 1.4rem;
   }
 
-  .CommentHeader {
+  .CommentDate {
     font-weight: bold;
     font-size: 1.6rem;
     margin-bottom: 1rem;
+  }
+
+  .CommentContent {
+    white-space: pre-wrap;
+  }
+
+  .Form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .SubmitButton {
+    color: white;
+    background-color: darkorchid;
+    border: 2px solid darkorchid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 20%;
+    left: 0;
+  }
+
+  .CommentCreator {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .FormInput {
+    margin: 1rem;
+    width: 40%;
+    height: 3rem;
   }
 }

@@ -1,8 +1,10 @@
 import styles from "./Posts.module.scss";
 import { Link } from "react-router";
+import { usePosts } from "../../hooks/usePosts.ts";
+import type { Post } from "../../types/Post/Post.ts";
 
 export default function Posts() {
-    // const { data: posts, isLoading, isError } = usePosts();
+    const { data: posts, isLoading, isError } = usePosts();
 
     return (
         <div className={styles.Posts}>
@@ -31,11 +33,11 @@ export default function Posts() {
                             <h4 className={styles.PostTitle}>{post.title}</h4>
                             <Link
                                 className={styles.PostLink}
-                                to={`/post/${post.id}`}
+                                to={`/posts/${post.id}`}
                             >
                                 Cały post
                             </Link>
-                            <p className={styles.PostContent}>{post.body.substring(0, 70)}...</p>
+                            <p className={styles.PostContent}>{post.content.substring(0, 70)}...</p>
                         </div>
                     ))}
                 </>
