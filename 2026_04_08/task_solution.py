@@ -1,48 +1,41 @@
-def read_graph(filename: str):
+def read_graph(filename: str) -> tuple[list[list[int]], int]:
     with open(filename, "r") as file:
-        vertices_number = int(file.readline().strip())
-        adjacency_list = [[]] * vertices_number
+        vertices_number: int = int(file.readline().strip())
+        adjacency_list: list[list[int]] = [[] for _ in range(vertices_number)]
 
         for vertices_data in file:
-            vertices_data_list = vertices_data.split()
+            vertices_data_list: list[str] = vertices_data.split()
             for i in range(1, len(vertices_data_list)):
                 adjacency_list[int(vertices_data_list[0])].append(int(vertices_data_list[i]))
 
         return adjacency_list, vertices_number
 
 
-def write_neighbours_list(adjacency_list):
+def write_neighbours_list(adjacency_list: list[list[int]]) -> None:
     print("Lista sąsiedztwa:")
-    vertex_result = ""
-    for i in range (0, len(adjacency_list)):
-        for vertex in adjacency_list[i][:-1]:
-            vertex_result += str(vertex) + ", "
-        vertex_result += str(adjacency_list[i][-1])
-
-        print(f"Sąsiadami wierzchołka {i} są: {vertex_result}")
-        vertex_result = ""
+    for i in range(0, len(adjacency_list)):
+        print(f"Sąsiadami wierzchołka {i} są: {", ".join(map(str, adjacency_list[i]))}")
 
 
-def list_to_matrix(adjacency_list):
-    vertices_number = len(adjacency_list)
-    matrix = [[0 for _ in range(vertices_number)] for _ in range (vertices_number)]
+def list_to_matrix(adjacency_list: list[list[int]]) -> list[list[int]]:
+    vertices_number: int = len(adjacency_list)
+    matrix: list[list[int]] = [[0 for _ in range(vertices_number)] for _ in range(vertices_number)]
 
     for i in range(0, len(adjacency_list)):
         for vertex in adjacency_list[i]:
             matrix[i][vertex] = 1
-    
+
     return matrix
 
 
-def write_matrix(matrix):
+def write_matrix(matrix: list[list[int]]) -> None:
     print("Macierz sąsiedztwa:")
-    vertices_number = len(matrix)
+    vertices_number: int = len(matrix)
 
     print("   ", end="")
     for i in range(vertices_number):
         print("%3d" % i, end="")
 
-    print()
     print()
 
     for i in range(vertices_number):
@@ -53,10 +46,13 @@ def write_matrix(matrix):
 
 
 def main():
-    adjacency_list, vertces_number = read_graph("graph.txt")
+    adjacency_list: list[list[int]]
+    vertices_number: int
+
+    adjacency_list, vertices_number = read_graph("graph.txt")
     write_neighbours_list(adjacency_list)
-    matrix = list_to_matrix(adjacency_list)
-    write_matrix(matrix)
+    print()
+    write_matrix(list_to_matrix(adjacency_list))
 
 
 if __name__ == "__main__":
